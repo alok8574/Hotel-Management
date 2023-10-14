@@ -15,7 +15,7 @@ void cust_detail();
 void food_order();
 void food_menu();
 void food_bill();
-void food_cancle();
+void food_cancel();
 void leave_room();
 
    /*CREATE STRUCTURE FOR CUSTOMER_DATA*/
@@ -140,7 +140,7 @@ void main()
 	 case '7':
 		 textcolor(6);
 		 cprintf("");
-		 food_cancle();
+		 food_cancel();
 		 goto start;
 	 case '8':
 		 textcolor(4);
@@ -191,7 +191,7 @@ void hotel_name1()
    printf("\n                     ||                                   ||");
    printf("\n                      :::::::::::::::::::::::::::::::::::::\n");
    printf("\n********************************************************************************");
-   printf("\nNear MMMUT Engineering College,Deoria Road,Gorakhpur Uttar Pradesh 273016,INDIA.");
+   printf("\nNear Government Polytechnic Jaunpur, Varanasi Highway,Jagdishpur,Jaunpur Uttar Pradesh 222002,INDIA.");
    printf("\n\t\t\t\tMOB.NO:- 6386617067\n");
    printf("\n\nPress any character to continue:- ");
    getch();
@@ -999,8 +999,8 @@ void food_bill()
 }
 			 /* FUNCTION FOOD BILL BODY CLOSE */
 
-			/* FUNCTION FOOD CANCLE BODY OPEN */
-void food_cancle()
+			/* FUNCTION FOOD CANCEL BODY OPEN */
+void food_cancel()
 {
    FILE *fp1,*fp2,*fp3;
    char ch;
@@ -1009,7 +1009,7 @@ void food_cancle()
    clrscr();
    hotel_name2();
    printf("\t------------------------------------------------------------------");
-   printf("\n\t\t\t         -:Cancle Food Items:-\n");
+   printf("\n\t\t\t         -:cancel Food Items:-\n");
    printf("\t------------------------------------------------------------------");
    printf("\nNote:- You want to back Home Page .Press '0' then ENTER.");
    printf("\n\tEnter the room no :- ");
@@ -1050,7 +1050,7 @@ else
    clrscr();
    hotel_name2();
    printf("\t------------------------------------------------------------------");
-   printf("\n\t\t\t         -:Cancle Food Items:-\n");
+   printf("\n\t\t\t         -:cancel Food Items:-\n");
    printf("\t------------------------------------------------------------------");
    printf("\n\tEnter the room no :- %d\n",r);
    i=0,f_check=0;
@@ -1080,7 +1080,7 @@ else
  if(f_check==1)
  {
    printf("\n Note:- You want to back Home Page .Press '0' then ENTER.");
-   printf("\n\tEnter the food item code. Which you want to cancle:- ");
+   printf("\n\tEnter the food item code. Which you want to cancel:- ");
    fflush(stdin);
    scanf("%d",&f_c);
    if(f_c==0)
@@ -1102,7 +1102,7 @@ else
    f_check1=1;
    else
 
-   /* WRITE IN TEMPORARY FILE APART CANCLE FOOD ITEM */
+   /* WRITE IN TEMPORARY FILE APART CANCEL FOOD ITEM */
 
    fprintf(fp3,"\n%d %d %s %s",order.room_no,order.food_code,order.date,order.time);
    if(f_check1==0)
@@ -1122,7 +1122,7 @@ else
 
        fprintf(fp2,"\n%d %d %s %s",order.room_no,order.food_code,order.date,order.time);
      }
-   printf("\n\tDo you want to cancle another food item code Y/N:- ");
+   printf("\n\tDo you want to cancel another food item code Y/N:- ");
    ch=getch();
     if(ch=='y'||ch=='Y')
     {
@@ -1148,7 +1148,7 @@ else
    fclose(fp2);
    fclose(fp1);
 }
-		      /* FUNCTION FOOD CANCLE BODY CLOSE */
+		      /* FUNCTION FOOD CANCEL BODY CLOSE */
 
 		       /* FUNCTION LEAVE ROOM BODY OPEN */
 void leave_room()
@@ -1204,7 +1204,7 @@ void leave_room()
      f_check++;
      else
 
-     /* WRITE THE FOOD ITEMS IN TEMPORARY FILE APART THE CANCLED ROOM NUMBER*/
+     /* WRITE THE FOOD ITEMS IN TEMPORARY FILE APART THE CANCELED ROOM NUMBER*/
 
      fprintf(fp4,"\n%d %d %s %s",order.room_no,order.food_code,order.date,order.time);
    }
@@ -1223,7 +1223,7 @@ void leave_room()
   }
   else
 
-  /* WRITE THE BOOKED ROOM DETAILS IN TEMPORARY FILE APART THE CANCLED ROOM NUMBER*/
+  /* WRITE THE BOOKED ROOM DETAILS IN TEMPORARY FILE APART THE CANCELED ROOM NUMBER*/
 
   fprintf(fp2,"\n%d %s %s %s %s %d %s %s %s",c_d.room_no,c_d.name,c_d.father,c_d.city,c_d.state,c_d.age,c_d.country,_strdate(c_d.date),_strtime(c_d.time));
  }
@@ -1254,7 +1254,7 @@ void leave_room()
   /* WRITE ROOM DETAILS IN MAIN FILE */
 
   fprintf(fp1,"\n%d %s %s %s %s %d %s %s %s",c_d.room_no,c_d.name,c_d.father,c_d.city,c_d.state,c_d.age,c_d.country,_strdate(c_d.date),_strtime(c_d.time));
-  printf("\n\n\tThis room_no is successfully cancle.\n");
+  printf("\n\n\tThis room_no is successfully cancel.\n");
  }
  else
  printf("\n\tThis room_no is not book.");
@@ -1275,6 +1275,6 @@ void leave_room()
   fclose(fp3);
   fclose(fp4);
 }
-			    /* FUNCTION FOOD CANCLE BODY CLOSE */
+			    /* FUNCTION FOOD CANCEL BODY CLOSE */
 
 	/*------------------------PROGRAM END------------------------- */
